@@ -1,0 +1,13 @@
+<p><%=@question%></p>
+<p>-You</p>
+<br>
+<%if @question.downcase == "i am going to work"%>
+  <p>Great!</p>
+<%elsif @question.end_with?("?")%>
+  <p>Silly question, get dressed and go back to work!</p>
+<%else%>
+  <p>I don't care, get dressed and go back to work!</p>
+<%end%>
+<p>-Your coach</p>
+<br>
+<%= link_to "Ask a new question", ask_path %>
